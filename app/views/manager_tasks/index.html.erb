@@ -1,13 +1,19 @@
 <h1>Hey! You will find your task list here.</h1>
 
-<% @task_list.each do |task| %>
+<%  @manager_tasks.each do |task| %>
 <ul>
   <li><%= task.name %></li>
   <li><%= task.description %></li>
   <li><%= task.due_date %></li>
 </ul>
 <%= link_to "View details", manager_task_path(task) %>
+<%= link_to "Delete task", manager_task_path(task), method: :delete %>
+
+
 <hr/>
 <% end %>
+
+<%= link_to "Create a new task", new_manager_task_path %>
+
 
 

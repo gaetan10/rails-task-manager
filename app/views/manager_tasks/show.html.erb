@@ -1,8 +1,12 @@
 <ul>
-  <li><%= @task.name %></li>
-  <li><%= @task.description %></li>
-  <li><%= @task.due_date %></li>
+  <li><%= @manager_task.name %></li>
+  <li><%= @manager_task.description %></li>
+  <li><%= @manager_task.due_date %></li>
 </ul>
+
+<%= link_to "Edit task", edit_manager_task_path %>
+
+
 
 <%= link_to "Back to my list", manager_tasks_path %>
 
